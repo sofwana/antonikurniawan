@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AntoniKurniawanAttorney - Premium Corporate & Commercial Law Firm">
+    <title>Tim Kami | Antoni Kurniawan Attorney</title>
+    <link rel="icon" type="image/png" href="assets/image/Logo2.jpeg">
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="Tim Kami | Antoni Kurniawan Attorney">
+    <meta property="og:description" content="Firma Hukum Profesional, Modern, dan Terpercaya.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            "name": "AntoniKurniawanAttorney",
+            "image": "assets/image/Logo1.png",
+            "url": "https://www.antonikurniawanattorney.com"
+        }
+    </script>
+
+    <style>
+        /* =========================================
+           1. TEMA WARNA: PREMIUM DARK & GOLD
+           ========================================= */
+        
+         :root {
+            --bg-dark: #0a0a0a;
+            --bg-secondary: #0f0f0f;
+            --bg-card: #141414;
+            --bg-card-hover: #1a1a1a;
+            --text-light: #f5f5f5;
+            --text-muted: #a3a3a3;
+            --gold-light: #fcf6ba;
+            --gold-main: #d4af37;
+            --gold-dark: #aa771c;
+            --gold-gradient: linear-gradient(135deg, #fcf6ba 0%, #d4af37 50%, #aa771c 100%);
+            --border-color: rgba(212, 175, 55, 0.18);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            margin-top: 0;
+        }
+        
+        .gradient-text {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .gold-text {
+            color: var(--gold-main);
+        }
+        
+        .text-gray {
+            color: var(--text-muted);
+            margin: 0;
+        }
+        
+        .text-sm {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin: 0;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-1 {
+            margin-top: 8px;
+        }
+        
+        .mt-2 {
+            margin-top: 15px;
+        }
+        
+        .mt-3 {
+            margin-top: 30px;
+        }
+        
+        .mt-4 {
+            margin-top: 40px;
+        }
+        
+        .mb-2 {
+            margin-bottom: 15px;
+        }
+        
+        .mb-4 {
+            margin-bottom: 40px;
+        }
+        
+        .pb-1 {
+            padding-bottom: 10px;
+        }
+        
+        .border-bottom {
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .bg-secondary {
+            background-color: var(--bg-secondary);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* =========================================
+           2. NAVBAR & LOGO STYLES
+           ========================================= */
+        
+        .navbar {
+            background-color: transparent;
+            border-bottom: 1px solid transparent;
+            height: 85px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar.scrolled {
+            background-color: var(--bg-dark);
+            border-bottom: 1px solid var(--border-color);
+            height: 85px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            /* Membatasi hitbox agar tidak terlalu melebar */
+            height: 60px;
+            width: 180px;
+            position: relative;
+        }
+        
+        .logo-img {
+            /* Logo diperbesar secara visual namun tidak memengaruhi ukuran hitbox */
+            height: 270px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            will-change: transform;
+        }
+        
+        .logo:hover .logo-img {
+            transform: translateY(-50%) scale(1.03);
+        }
+        
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--gold-gradient);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold-main);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .hamburger .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+            background-color: var(--gold-main);
+            border-radius: 2px;
+        }
+        /* =========================================
+           3. HERO HEADER
+           ========================================= */
+        
+        .page-header {
+            padding: 160px 0 80px;
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.7), #0a0a0a), url('assets/image/team.jpeg') center/cover no-repeat;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .page-header h1 {
+            font-size: 4rem;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        
+        .page-header p {
+            color: var(--gold-main);
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        /* =========================================
+           4. TEAM SECTION & CARDS
+           ========================================= */
+        
+        .section {
+            padding: 90px 0;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 40px 30px;
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold-main);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.2);
+            background-color: var(--bg-card-hover);
+        }
+        
+        .card:hover::before {
+            opacity: 1;
+        }
+        
+        .team-img {
+            width: 220px;
+            height: 280px;
+            object-fit: cover;
+            border: 3px solid transparent;
+            background: var(--gold-gradient) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+            border-radius: 12px;
+            padding: 5px;
+            margin-bottom: 20px;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+        }
+        
+        .img-wrapper {
+            display: inline-block;
+            border-radius: 12px;
+            padding: 4px;
+            background: var(--gold-gradient);
+            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+        
+        .img-wrapper img {
+            display: block;
+            width: 210px;
+            height: 270px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .card:hover .img-wrapper {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .team-card h3,
+        .team-card-no-img h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        
+        .team-card-no-img h4 {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        /* =========================================
+           5. FLOATING BUTTONS
+           ========================================= */
+        
+        .floating-wa {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25d366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        
+        .floating-wa:hover {
+            background-color: #1ebe57;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            color: #ffffff;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gold-gradient);
+            color: #000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+            z-index: 1000;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(191, 149, 63, 0.5);
+        }
+        /* =========================================
+           6. FOOTER STYLES
+           ========================================= */
+        
+        .footer {
+            background-color: #050505;
+            padding: 60px 0 20px;
+            border-top: 1px solid var(--border-color);
+            color: #ffffff;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 220px;
+        }
+        
+        .footer-logo {
+            width: 250px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        
+        .footer-col p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        
+        .footer-col h4 {
+            color: var(--gold-light);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold-main);
+            transform: translateX(5px);
+        }
+        /* List Kontak Footer Vertikal */
+        
+        .footer-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            word-break: break-word;
+        }
+        
+        .footer-contact-item i {
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-main);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-contact-item:hover {
+            color: var(--gold-main);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact-item:hover i {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--gold-main);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        /* =========================================
+           7. ANIMASI ELEGAN & RESPONSIVE
+           ========================================= */
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Responsif Tablet (769px - 1024px) */
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px 30px;
+                /* Ditambahkan jarak vertikal ekstra agar tiap item tidak terasa menempel */
+            }
+            .grid-4,
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .logo-img {
+                height: 180px;
+            }
+        }
+        /* Responsif Mobile */
+        
+        @media (max-width: 768px) {
+            .navbar,
+            .navbar.scrolled {
+                height: 70px;
+            }
+            .logo-img {
+                height: 160px;
+                /* Logo di mobile tetap terskala proposional dengan posisi absolute */
+            }
+            .hamburger {
+                display: block;
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: rgba(10, 10, 10, 0.98);
+                width: 100%;
+                text-align: center;
+                transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                border-bottom: 1px solid var(--border-color);
+                padding: 30px 0;
+                backdrop-filter: blur(15px);
+            }
+            .nav-menu.active {
+                left: 0;
+            }
+            .nav-list {
+                flex-direction: column;
+                gap: 22px;
+            }
+            .page-header {
+                padding: 130px 0 50px;
+            }
+            .page-header h1 {
+                font-size: 2.8rem;
+            }
+            .grid-2,
+            .grid-3,
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+            .footer-col {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/image/Logo.png" alt="AntoniKurniawanAttorney Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                    <li><a href="services.html" class="nav-link">Bidang Praktik</a></li>
+                    <li><a href="team.html" class="nav-link active">Tim Kami</a></li>
+                    <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                    <li><a href="contact.html" class="nav-link">Kontak Kami</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header fade-up">
+            <div class="container">
+                <h1 class="gradient-text">Tim Kami</h1>
+                <p>Para profesional hukum di balik kesuksesan klien kami</p>
+            </div>
+        </section>
+
+        <!-- Managing Partners -->
+        <section class="section team-section">
+            <div class="container">
+                <h2 class="section-title gradient-text text-center fade-up">Managing Partners</h2>
+                <div class="grid-2 mt-4">
+
+                    <div class="card team-card text-center fade-up">
+                        <div class="img-wrapper">
+                            <img src="assets/image/Antoni.jpeg" alt="Antoni Steven Bangun">
+                        </div>
+                        <h3 class="gold-text mt-2">Antoni Steven Bangun, S.H.</h3>
+                        <p class="text-gray">Founder & Managing Partner</p>
+                        <p class="text-sm mt-1">His Primary Areas of Practice include Anti Corruption, Money Laundering, White Collar Crime, Financial Crimes, Criminal Law, Commercial and Criminal Litigations.</p>
+                    </div>
+
+                    <div class="card team-card text-center fade-up" style="transition-delay: 0.2s;">
+                        <div class="img-wrapper">
+                            <img src="assets/image/Eddy.jpeg" alt="Muh. Eddy Kurniawan">
+                        </div>
+                        <h3 class="gold-text mt-2">Muh. Eddy Kurniawan, S.H.</h3>
+                        <p class="text-gray">Founder & Managing Partner</p>
+                        <p class="text-sm mt-1">His Primary Areas of Practice include Corporate & Commercial Law, Banking & Finance, Commercial Litigation, Civil Litigation, Real Estate & Property, Bankruptcy, and Dispute Resolution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners -->
+        <section class="section bg-secondary">
+            <div class="container">
+                <h2 class="section-title gradient-text text-center fade-up">Partners</h2>
+                <div class="grid-3 mt-4">
+                    <div class="card team-card-no-img text-center fade-up">
+                        <h3 class="gold-text">Lusman Bua, S.H., M.H.</h3>
+                        <p class="text-gray">Primary Area Of Practice</p>
+                        <p class="text-sm mt-1">Real Estate and Property, Anti Corruption, White Collar Crime, Financial Crimes, Criminal Law, Commercial Law, Commercial and Criminal Litigations.</p>
+                    </div>
+                    <div class="card team-card-no-img text-center fade-up" style="transition-delay: 0.1s;">
+                        <h3 class="gold-text">Pratama Hendri Putra, S.H.</h3>
+                        <p class="text-gray">Primary Area Of Practice</p>
+                        <p class="text-sm mt-1">Real Estate & Property, Commercial Law, Regulatory & Licensing, Banking & Finance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lawyers -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title gradient-text text-center mb-4 fade-up">Lawyers</h2>
+
+                <h3 class="gold-text mb-2 border-bottom pb-1 fade-up">Senior Lawyers</h3>
+                <div class="grid-4 mb-4">
+                    <div class="card team-card-no-img fade-up" style="transition-delay: 0.1s;">
+                        <h4>Margestasi, S.H., M.H.</h4>
+                        <p class="text-sm mt-1">Real Estate and Property, Anti Corruption, White Collar Crime, Financial Crimes, Criminal Law, Commercial Law, Criminal and Commercial Litigations.</p>
+                    </div>
+                    <div class="card team-card-no-img fade-up" style="transition-delay: 0.2s;">
+                        <h4>Dede Haryadi, S.H.</h4>
+                        <p class="text-sm mt-1">Commercial Law, Criminal Law, and Litigation.</p>
+                    </div>
+                </div>
+                <h3 class="gold-text mb-2 border-bottom pb-1 mt-4 fade-up">Junior Lawyers</h3>
+                <div class="grid-4">
+                    <div class="card team-card-no-img fade-up">
+                        <h4>Muhammad Ainul Yaqin, S.H.</h4>
+                        <p class="text-sm mt-1">Commercial Law, Criminal Law, and Litigation.</p>
+                    </div>
+                    <div class="card team-card-no-img fade-up">
+                        <h4>Nora Widiastuti Ratu Pa</h4>
+                        <p class="text-sm mt-1">Commercial Law, Criminal Law, Real Estate and Property, Anti Corruption, Financial Crimes, and Litigation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6282318814879" class="floating-wa" target="_blank" aria-label="Chat via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="assets/image/Logo1.png" alt="Logo Antoni Kurniawan Attorney" class="footer-logo">
+                <p>Anda tidak harus menghadapi masalah hukum ini sendirian. AntoniKurniawanAttorney hadir untuk mendengarkan, melindungi, dan memperjuangkan hak anda, oleh karena itu langkah pertama menuju keadilan dimulai dari sini.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="footer-contact-list">
+                    <a href="mailto:antonikurniawanattorney@gmail.com" class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>antonikurniawanattorney@gmail.com</span>
+                    </a>
+
+                    <a href="https://wa.me/6282318814879" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+62 823 1881 4879</span>
+                    </a>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Ganesha+Raya,+Villa+Pamulang+Blok+UE+No.5,+RT+02+RW+16,+Kelurahan+Pondok+Benda,+Kecamatan+Pamulang,+Kota+Tangerang+Selatan" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jl. Ganesha Raya, Villa Pamulang Blok UE No.5, RT 02 RW 16, Kelurahan Pondok Benda, Kecamatan Pamulang, Kota Tangerang Selatan, Jawa Barat</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/attorneyantonkurniawan/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>@attorneyantonkurniawan</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="services.html">Layanan Kami</a></li>
+                    <li><a href="team.html">Tim Kami</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="contact.html">Kontak Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Maps</h4>
+                <div class="mt-3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3965.322353318095!2d106.71697632475176!3d-6.352297293637604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJl.%20Ganesha%20Raya%2C%20Villa%20Pamulang%20Blok%20UE%20No.5%2C%20RT%2002%20%20RW%2016%2C%20Kelurahan%20Pondok%20Benda%2C%20Kecamatan%20Pamulang%2C%20Kota%20Tangerang%20Selatan%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1785754206261!5m2!1sid!2sid"
+                        width="100%" height="200" style="border:1px solid var(--border-color); border-radius: 8px; filter: grayscale(80%) contrast(120%);" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Google Maps Kantor"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 AntoniKurniawanAttorney. All Rights Reserved. | Theme By DreamScript</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interaktif -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }));
+
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+
+            backToTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            const observerOptions = {
+                root: null,
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

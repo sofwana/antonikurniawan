@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Layanan Hukum - Antoni Kurniawan Attorney">
+    <title>Bidang Praktik | Antoni Kurniawan Attorney</title>
+    <link rel="icon" type="image/png" href="assets/image/Logo2.jpeg">
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="Bidang Praktik | Antoni Kurniawan Attorney">
+    <meta property="og:description" content="Firma Hukum Profesional, Modern, dan Terpercaya.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* =========================================
+           1. TEMA WARNA: PREMIUM DARK & GOLD
+           ========================================= */
+        
+         :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: rgba(18, 18, 18, 0.65);
+            --bg-card-hover: rgba(24, 24, 24, 0.85);
+            --text-light: #f5f5f5;
+            --text-muted: #a3a3a3;
+            --gold-light: #fcf6ba;
+            --gold-main: #d4af37;
+            --gold-dark: #aa771c;
+            --gold-gradient: linear-gradient(135deg, #fcf6ba 0%, #d4af37 50%, #aa771c 100%);
+            --border-color: rgba(212, 175, 55, 0.18);
+            --gold-glow: rgba(212, 175, 55, 0.15);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--bg-dark);
+            background-image: radial-gradient(circle at 15% 30%, rgba(212, 175, 55, 0.04) 0%, transparent 40%), radial-gradient(circle at 85% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 40%);
+            background-attachment: fixed;
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            margin-top: 0;
+        }
+        
+        .gradient-text {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .mt-3 {
+            margin-top: 30px;
+        }
+        /* =========================================
+           2. NAVBAR & LOGO STYLES
+           ========================================= */
+        
+        .navbar {
+            background-color: transparent;
+            border-bottom: 1px solid transparent;
+            height: 85px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar.scrolled {
+            background-color: var(--bg-dark);
+            border-bottom: 1px solid var(--border-color);
+            height: 85px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            /* Membatasi hitbox agar tidak terlalu melebar */
+            height: 60px;
+            width: 180px;
+            position: relative;
+        }
+        
+        .logo-img {
+            /* Logo diperbesar secara visual namun tidak memengaruhi ukuran hitbox */
+            height: 270px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            will-change: transform;
+        }
+        
+        .logo:hover .logo-img {
+            transform: translateY(-50%) scale(1.03);
+        }
+        
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--gold-gradient);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold-main);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .hamburger .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+            background-color: var(--gold-main);
+            border-radius: 2px;
+        }
+        /* =========================================
+           3. HERO HEADER
+           ========================================= */
+        
+        .page-header {
+            padding: 160px 0 70px;
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.7), #0a0a0a), url('assets/image/banner.png') center/cover no-repeat;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+        
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        
+        .page-header p {
+            color: var(--gold-main);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        /* =========================================
+           4. SERVICES SECTION HEADER
+           ========================================= */
+        
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--gold-gradient);
+            display: block;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        /* =========================================
+           5. SERVICES GRID, CARDS & DROPDOWN
+           ========================================= */
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .card.service-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            padding: 40px 30px;
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .card.service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .card.service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 25px var(--gold-glow);
+            background: var(--bg-card-hover);
+        }
+        
+        .card.service-card:hover::before {
+            opacity: 1;
+        }
+        
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--gold-main);
+            margin-bottom: 20px;
+            transition: transform 0.4s ease, text-shadow 0.4s ease;
+        }
+        
+        .card.service-card:hover .card-icon {
+            transform: scale(1.1);
+            text-shadow: 0 0 15px var(--gold-glow);
+        }
+        
+        .card.service-card h4 {
+            font-size: 1.35rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .card.service-card p.short-desc {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+            margin: 0;
+            line-height: 1.6;
+        }
+        /* Style Dropdown Penjelasan */
+        
+        .card-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.4s ease, margin-top 0.4s ease;
+        }
+        
+        .card.service-card.expanded .card-dropdown {
+            max-height: 300px;
+            opacity: 1;
+            margin-top: 15px;
+            border-top: 1px dashed var(--border-color);
+            padding-top: 15px;
+        }
+        
+        .card-dropdown p {
+            color: #d1d1d1;
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.7;
+        }
+        
+        .toggle-btn {
+            background: transparent;
+            border: none;
+            color: var(--gold-main);
+            margin-top: 25px;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+            width: max-content;
+        }
+        
+        .toggle-btn:hover {
+            color: var(--gold-light);
+        }
+        
+        .toggle-btn i {
+            transition: transform 0.4s ease;
+        }
+        
+        .card.service-card.expanded .toggle-btn i {
+            transform: rotate(180deg);
+        }
+        /* =========================================
+           TAMBAHAN: DESKTOP CARD LAYOUT (Menyesuaikan Gambar)
+           ========================================= */
+        
+        @media (min-width: 769px) {
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .grid-3 .card.service-card:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+                justify-self: center;
+                width: calc(50% - 10px);
+            }
+            .card.service-card {
+                display: grid;
+                grid-template-columns: max-content 1fr max-content;
+                grid-template-rows: auto auto auto;
+                grid-template-areas: "icon title button" "icon desc button" "dropdown dropdown dropdown";
+                align-items: center;
+                padding: 20px 25px;
+                border-radius: 6px;
+            }
+            .card-icon {
+                grid-area: icon;
+                margin-bottom: 0;
+                margin-right: 20px;
+                font-size: 1.8rem;
+            }
+            .card.service-card h4 {
+                grid-area: title;
+                margin-bottom: 0;
+                font-size: 1.15rem;
+                align-self: flex-end;
+            }
+            .card.service-card p.short-desc {
+                grid-area: desc;
+                margin-bottom: 0;
+                margin-top: 4px;
+                font-size: 0.9rem;
+                align-self: flex-start;
+            }
+            .toggle-btn {
+                grid-area: button;
+                margin-top: 0;
+                margin-left: 15px;
+                font-size: 1.2rem;
+            }
+            .toggle-btn .btn-text {
+                display: none;
+            }
+            .card-dropdown {
+                grid-area: dropdown;
+            }
+        }
+        /* =========================================
+           6. FLOATING BUTTONS
+           ========================================= */
+        
+        .floating-wa {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: #25d366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        
+        .floating-wa:hover {
+            background-color: #1ebe57;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            color: #ffffff;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gold-gradient);
+            color: #000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+            z-index: 1000;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(191, 149, 63, 0.5);
+        }
+        /* =========================================
+           7. FOOTER
+           ========================================= */
+        
+        .footer {
+            background-color: #050505;
+            padding: 60px 0 20px;
+            border-top: 1px solid var(--border-color);
+            color: #ffffff;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 220px;
+        }
+        
+        .footer-logo {
+            width: 250px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        
+        .footer-col p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        
+        .footer-col h4 {
+            color: var(--gold-light);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold-main);
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            color: var(--gold-main);
+            border-color: var(--gold-main);
+            background: rgba(212, 175, 55, 0.12);
+            transform: translateY(-3px);
+        }
+        /* List Kontak Footer Vertikal */
+        
+        .footer-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            word-break: break-word;
+        }
+        
+        .footer-contact-item i {
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-main);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-contact-item:hover {
+            color: var(--gold-main);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact-item:hover i {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--gold-main);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        /* =========================================
+           8. ANIMASI & RESPONSIVE
+           ========================================= */
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Responsif Tablet (769px - 1024px) */
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px 30px;
+            }
+            .logo-img {
+                height: 180px;
+            }
+        }
+        /* Responsif Mobile (Maks 768px) */
+        
+        @media (max-width: 768px) {
+            .navbar,
+            .navbar.scrolled {
+                height: 70px;
+            }
+            .logo-img {
+                height: 160px;
+            }
+            .hamburger {
+                display: block;
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: rgba(10, 10, 10, 0.98);
+                width: 100%;
+                text-align: center;
+                transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                border-bottom: 1px solid var(--border-color);
+                padding: 30px 0;
+                backdrop-filter: blur(15px);
+            }
+            .nav-menu.active {
+                left: 0;
+            }
+            .nav-list {
+                flex-direction: column;
+                gap: 22px;
+            }
+            .page-header {
+                padding: 120px 0 40px;
+            }
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            .footer-col {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/image/Logo.png" alt="AntoniKurniawanAttorney Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                    <li><a href="services.html" class="nav-link">Bidang Praktik</a></li>
+                    <li><a href="team.html" class="nav-link">Tim Kami</a></li>
+                    <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                    <li><a href="contact.html" class="nav-link active">Kontak Kami</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header fade-up">
+            <div class="container">
+                <h1 class="gradient-text">Layanan Hukum</h1>
+                <p>Solusi Hukum Strategis yang Dapat Anda Percayai</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-header fade-up">
+                    <h2>Layanan Hukum Kami</h2>
+                    <p>Kami menyediakan layanan hukum yang komprehensif, strategis, dan berorientasi pada solusi untuk melindungi kepentingan pribadi maupun bisnis Anda dengan standar profesionalisme yang tinggi.</p>
+                </div>
+
+                <div class="grid-3">
+
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-building card-icon"></i>
+                        <h4>Corporate & Employment Law</h4>
+                        <p class="short-desc">Pendirian perusahaan, tata kelola, dan hubungan industrial.</p>
+
+                        <div class="card-dropdown">
+                            <p>Kami memberikan pendampingan hukum kepada perusahaan dalam berbagai aspek hukum korporasi dan ketenagakerjaan, mulai dari pendirian perusahaan, tata kelola perusahaan (corporate governance), aksi korporasi (rights issue, stock
+                                split, buyback saham, merger dan akuisisi, serta private placement), kepatuhan regulasi, hingga penyusunan kebijakan ketenagakerjaan, hubungan industrial, penyelesaian perselisihan, dan pemutusan hubungan kerja. Pendekatan
+                                kami bertujuan mendukung keberlangsungan usaha sekaligus meminimalkan risiko hukum.</p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-file-contract card-icon"></i>
+                        <h4>Commercial Law</h4>
+                        <p class="short-desc">Negosiasi dan perlindungan hukum transaksi komersial.</p>
+
+                        <div class="card-dropdown">
+                            <p>Kami membantu pelaku usaha dan perusahaan dalam menangani berbagai aspek hukum komersial, termasuk penyusunan dan negosiasi kontrak, transaksi bisnis, kerja sama komersial, distribusi, pengadaan barang dan jasa, serta penyelesaian
+                                sengketa bisnis. Kami memastikan setiap transaksi memiliki kepastian hukum dan mendukung tujuan bisnis klien.</p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-landmark card-icon"></i>
+                        <h4>Banking & Finance</h4>
+                        <p class="short-desc">Regulasi perbankan, pembiayaan sindikasi, dan fintech.</p>
+
+                        <div class="card-dropdown">
+                            <p>Kami memberikan layanan hukum di bidang perbankan dan pembiayaan, meliputi penyusunan dan penelaahan dokumentasi pembiayaan, perjanjian kredit, jaminan, restrukturisasi utang, pembiayaan korporasi, kredit bermasalah (non-performing
+                                loans), hingga penyelesaian sengketa antara lembaga keuangan, pelaku usaha, dan nasabah. </p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-home card-icon"></i>
+                        <h4>Real Estate & Property Law</h4>
+                        <p class="short-desc">Sengketa lahan, akuisisi properti, dan perizinan.</p>
+
+                        <div class="card-dropdown">
+                            <p>Kami mendampingi klien dalam berbagai aspek hukum pertanahan dan properti, termasuk akuisisi tanah, legal due diligence, pengembangan proyek, transaksi jual beli, sewa-menyewa, pengurusan hak atas tanah, serta penyelesaian
+                                sengketa pertanahan dan properti. Kami membantu memastikan setiap transaksi dilakukan dengan kepastian dan perlindungan hukum yang optimal.</p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-briefcase card-icon"></i>
+                        <h4>Bankruptcy & Restructuring</h4>
+                        <p class="short-desc">PKPU, kepailitan, dan restrukturisasi hutang.</p>
+
+                        <div class="card-dropdown">
+                            <p>Kami memberikan pendampingan hukum dalam proses Kepailitan dan Penundaan Kewajiban Pembayaran Utang (PKPU), baik bagi kreditur maupun debitur. Layanan kami mencakup analisis resiko, negosiasi restrukturisasi utang, penyusunan
+                                strategi hukum, representasi di Pengadilan Niaga, hingga pelaksanaan putusan untuk memperoleh penyelesaian yang efektif dan sesuai dengan kepentingan klien. </p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-chart-line card-icon"></i>
+                        <h4>Anti-Corruption & Financial Crimes</h4>
+                        <p class="short-desc">Sengketa pajak dan pembelaan tindak pidana korporasi.</p>
+                        <div class="card-dropdown">
+                            <p>Kami memberikan pendampingan hukum dalam perkara tindak pidana korupsi dan kejahatan finansial, termasuk penyuapan, penggelapan, penipuan, pencucian uang, penyalahgunaan jabatan, serta tindak pidana ekonomi lainnya. Layanan
+                                kami mencakup pemberian nasihat hukum, pendampingan pada tahap penyelidikan dan penyidikan, representasi di pengadilan, serta strategi mitigasi risiko dan kepatuhan terhadap regulasi.</p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-balance-scale-left card-icon"></i>
+                        <h4>Civil & Criminal Litigation</h4>
+                        <p class="short-desc">Pendampingan peradilan perdata maupun pidana.</p>
+
+                        <div class="card-dropdown">
+                            <p>Kami mewakili klien dalam berbagai sengketa perdata maupun perkara pidana di setiap tingkat peradilan. Dengan pendekatan yang strategis dan analisis hukum yang komprehensif, kami menyusun strategi litigasi yang efektif untuk
+                                melindungi hak, kepentingan, serta posisi hukum klien sejak tahap awal hingga penyelesaian perkara.</p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-comments card-icon"></i>
+                        <h4>Alternative Dispute Resolution</h4>
+                        <p class="short-desc">Mediasi, konsiliasi, dan arbitrase domestik/internasional.</p>
+
+                        <div class="card-dropdown">
+                            <p>Kami membantu klien menyelesaikan sengketa melalui mekanisme alternatif di luar pengadilan, seperti negosiasi, mediasi, konsiliasi, dan arbitrase. Pendekatan ini bertujuan menghasilkan penyelesaian yang lebih cepat, efisien,
+                                menjaga hubungan bisnis, serta memberikan kepastian hukum yang tetap mengedepankan kepentingan para pihak. </p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-search card-icon"></i>
+                        <h4>Legal Due Diligence</h4>
+                        <p class="short-desc">Audit hukum menyeluruh untuk investasi dan akuisisi.</p>
+
+                        <div class="card-dropdown">
+                            <p>Kami melakukan pemeriksaan hukum secara menyeluruh terhadap perusahaan, aset, maupun transaksi untuk mengidentifikasi potensi risiko hukum, kewajiban, serta aspek kepatuhan terhadap peraturan perundangundangan. Legal due diligence
+                                menjadi bagian penting dalam mendukung transaksi bisnis, investasi, merger dan akuisisi, maupun pengembangan usaha.</p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <!-- Card 10 -->
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-pen-nib card-icon"></i>
+                        <h4>Contract Drafting & Review </h4>
+                        <p class="short-desc">Penyusunan dan peninjauan kontrak untuk melindungi kepentingan hukum Anda.</p>
+                        <div class="card-dropdown">
+                            <p>Kami menyusun, menelaah, dan memberikan masukan terhadap berbagai dokumen hukum dan perjanjian komersial guna memastikan setiap klausul, memberikan kepastian hukum, melindungi kepentingan klien, serta meminimalkan potensi sengketa
+                                di kemudian hari. Setiap kontrak disusun dengan memperhatikan kebutuhan bisnis dan kepatuhan terhadap hukum yang berlaku. </p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <!-- Card 11 -->
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-sitemap card-icon"></i>
+                        <h4>Business Restructuring </h4>
+                        <p class="short-desc">Solusi hukum untuk restrukturisasi bisnis yang efektif dan berkelanjutan.</p>
+                        <div class="card-dropdown">
+                            <p> Kami memberikan pendampingan hukum dalam proses restrukturisasi perusahaan, baik yang berkaitan dengan perubahan struktur organisasi, restrukturisasi utang, reorganisasi usaha, maupun penyesuaian terhadap perubahan regulasi
+                                dan kondisi bisnis. Tujuan kami adalah membantu klien membangun struktur usaha yang lebih efisien, berkelanjutan, dan memiliki kepastian hukum. </p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <!-- Card 12 -->
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-landmark card-icon"></i>
+                        <h4>Regulatory & Licengsing</h4>
+                        <p class="short-desc">Pendampingan perizinan dan kepatuhan terhadap regulasi yang berlaku.</p>
+                        <div class="card-dropdown">
+                            <p>Kami membantu perusahaan dan pelaku usaha dalam memenuhi persyaratan perizinan serta kepatuhan terhadap berbagai regulasi yang mengatur kegiatan usahanya. Dengan pendekatan yang strategis dan berbasis kepatuhan, kami memastikan
+                                setiap proses perizinan dan aspek regulasi mendukung keberlangsungan usaha, memberikan kepastian hukum, serta meminimalkan risiko di masa mendatang. </p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <!-- Card 13 -->
+                    <div class="card service-card fade-up">
+                        <i class="fas fa-shield-alt card-icon"></i>
+                        <h4>Legal Retainer Services </h4>
+                        <p class="short-desc">Layanan konsultasi dan pendampingan hukum secara berkelanjutan untuk bisnis Anda..</p>
+                        <div class="card-dropdown">
+                            <p>Kami menyediakan layanan pendampingan hukum secara berkelanjutan bagi perusahaan dan pelaku usaha sebagai mitra hukum terpercaya. Melalui layanan legal retainer, kami memberikan konsultasi hukum, penyusunan dan penelaahan dokumen,
+                                mitigasi risiko, kepatuhan regulasi, serta dukungan hukum sehari-hari, sehingga klien dapat menjalankan kegiatan usahanya dengan lebih aman, efektif, dan percaya diri. </p>
+                        </div>
+                        <button class="toggle-btn"><span class="btn-text">Read More</span> <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6282318814879" class="floating-wa" target="_blank" aria-label="Chat via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="assets/image/Logo1.png" alt="Logo Antoni Kurniawan Attorney" class="footer-logo">
+                <p>Anda tidak harus menghadapi masalah hukum ini sendirian. AntoniKurniawanattrorney hadir untuk mendengarkan, melindungi, dan memperjuangkan hak anda, oleh karena itu langkah pertama menuju keadilan dimulai dari sini.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="footer-contact-list">
+                    <a href="mailto:antonikurniawanattorney@gmail.com" class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>antonikurniawanattorney@gmail.com</span>
+                    </a>
+
+                    <a href="https://wa.me/6282318814879" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+62 823 1881 4879</span>
+                    </a>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Ganesha+Raya,+Villa+Pamulang+Blok+UE+No.5,+RT+02+RW+16,+Kelurahan+Pondok+Benda,+Kecamatan+Pamulang,+Kota+Tangerang+Selatan" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jl. Ganesha Raya, Villa Pamulang Blok UE No.5, RT 02 RW 16, Kelurahan Pondok Benda, Kecamatan Pamulang, Kota Tangerang Selatan, Jawa Barat</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/attorneyantonkurniawan/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>@attorneyantonkurniawan</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="services.html">Layanan Kami</a></li>
+                    <li><a href="team.html">Team Kami</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="contact.html">Kontak Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Maps</h4>
+                <div class="mt-3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3965.322353318095!2d106.71697632475176!3d-6.352297293637604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJl.%20Ganesha%20Raya%2C%20Villa%20Pamulang%20Blok%20UE%20No.5%2C%20RT%2002%20%20RW%2016%2C%20Kelurahan%20Pondok%20Benda%2C%20Kecamatan%20Pamulang%2C%20Kota%20Tangerang%20Selatan%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1785754206261!5m2!1sid!2sid"
+                        width="100%" height="200" style="border:1px solid var(--border-color); border-radius: 8px; filter: grayscale(80%) contrast(120%);" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Google Maps Kantor"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 AntoniKurniawanAttorney. All Rights Reserved. | Theme By DreamScript</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interaktif -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }));
+
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            });
+
+            backToTop.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            const observerOptions = {
+                root: null,
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+            toggleButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const card = this.closest('.service-card');
+                    const textSpan = this.querySelector('.btn-text');
+
+                    card.classList.toggle('expanded');
+
+                    if (card.classList.contains('expanded')) {
+                        textSpan.textContent = 'Show Less';
+                    } else {
+                        textSpan.textContent = 'Read More';
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>

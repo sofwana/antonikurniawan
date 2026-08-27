@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi Antoni Kurniawan Attorney - Law Firm Profesional & Terpercaya di Jakarta. Konsultasi hukum korporat, komersial, dan litigasi.">
+    <title>Kontak Kami | Antoni Kurniawan Attorney</title>
+    <link rel="icon" type="image/png" href="assets/image/Logo2.jpeg">
+
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="Kontak Kami| Antoni Kurniawan Attorney">
+    <meta property="og:description" content="Firma Hukum Profesional, Modern, dan Terpercaya. Hubungi kami untuk konsultasi hukum Anda.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            "name": "AntoniKurniawanAttorney",
+            "image": "assets/image/Logo2.jpeg",
+            "url": "https://www.antonikurniawanattorney.com",
+            "telephone": "+622112345678",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Menara Sudirman Lt. 45, Jl. Jend. Sudirman",
+                "addressLocality": "Jakarta Selatan",
+                "postalCode": "12190",
+                "addressCountry": "ID"
+            }
+        }
+    </script>
+
+    <style>
+        /* =========================================
+           1. TEMA WARNA & VARIABLE CSS
+           ========================================= */
+        
+         :root {
+            --bg-dark: #070709;
+            --bg-secondary: #0f0f12;
+            --bg-card: #13141a;
+            --bg-card-hover: #191b22;
+            --gold-main: #D4AF37;
+            --gold-light: #F3E5AB;
+            --gold-gradient: linear-gradient(135deg, #fcf6ba 0%, #d4af37 50%, #aa771c 100%);
+            --text-main: #F8F9FA;
+            --text-muted: #A0AEC0;
+            --text-light: #e0e0e0;
+            --black-solid: #050505;
+            --border-color: rgba(212, 175, 55, 0.18);
+            --transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+        }
+        /* Custom Scrollbar */
+        
+         ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-main);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.03), transparent 25%);
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            margin-top: 0;
+            letter-spacing: -0.02em;
+        }
+        
+        .gradient-text {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .gold-text {
+            color: var(--gold-main);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .m-0 {
+            margin: 0;
+        }
+        
+        .mb-2 {
+            margin-bottom: 20px;
+        }
+        
+        .mb-3 {
+            margin-bottom: 30px;
+        }
+        
+        .mt-3 {
+            margin-top: 30px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            padding: 90px 0;
+        }
+        /* =========================================
+           2. PRELOADER
+           ========================================= */
+        
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-dark);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loader {
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--gold-main);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        /* =========================================
+           3. NAVBAR & HAMBURGER MENU
+           ========================================= */
+        
+        .navbar {
+            background-color: transparent;
+            border-bottom: 1px solid transparent;
+            height: 85px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(7, 7, 9, 0.98);
+            border-bottom: 1px solid var(--border-color);
+            height: 85px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            position: relative;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            /* Membatasi hitbox agar tidak terlalu melebar */
+            height: 60px;
+            width: 180px;
+            position: relative;
+        }
+        
+        .logo-img {
+            /* Logo diperbesar secara visual namun tidak memengaruhi ukuran hitbox */
+            height: 270px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            will-change: transform;
+        }
+        
+        .logo:hover .logo-img {
+            transform: translateY(-50%) scale(1.03);
+        }
+        
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--gold-gradient);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold-main);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        .hamburger .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            background-color: var(--gold-main);
+            border-radius: 2px;
+        }
+        /* =========================================
+           4. PAGE HEADER
+           ========================================= */
+        
+        .page-header {
+            padding: 180px 0 70px;
+            background: linear-gradient(to bottom, rgba(7, 7, 9, 0.7), rgba(7, 7, 9, 1)), url('assets/image/banner.png') center/cover no-repeat;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        
+        .page-header p {
+            color: var(--gold-main);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        /* =========================================
+           5. CONTACT LAYOUT & CARDS
+           ========================================= */
+        
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .col-6 {
+            flex: 1;
+            min-width: 320px;
+        }
+        
+        .align-center {
+            align-items: center;
+        }
+        
+        .flex-grow {
+            flex-grow: 1;
+        }
+        
+        .h-100 {
+            height: 100%;
+            box-sizing: border-box;
+        }
+        
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            box-sizing: border-box;
+            overflow: hidden;
+            /* Mencegah elemen keluar dari card */
+        }
+        
+        .card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.08);
+            background-color: var(--bg-card-hover);
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        
+        .contact-info li {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+        }
+        
+        .contact-info i {
+            font-size: 1.1rem;
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--gold-main);
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        /* Ukuran font diperkecil di sini */
+        
+        .contact-info span {
+            line-height: 1.5;
+            padding-top: 8px;
+            flex: 1;
+            font-size: 0.85rem;
+        }
+        /* Mencegah teks selain alamat turun ke bawah (Wrap) */
+        
+        .contact-info li:not(:first-child) span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+            /* Dibutuhkan agar ellipsis bekerja */
+        }
+        /* Alamat (Elemen pertama) tetap boleh wrap/turun ke bawah */
+        
+        .contact-info li:first-child span {
+            white-space: normal;
+        }
+        
+        .contact-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        /* =========================================
+           6. FORMS
+           ========================================= */
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+        
+        .form-group label {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            padding: 14px 18px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--gold-main);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+            background: rgba(212, 175, 55, 0.03);
+        }
+        
+        .form-group select option {
+            background: var(--bg-card);
+            color: var(--text-light);
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-muted);
+        }
+        
+        .btn-primary {
+            background: var(--gold-gradient);
+            color: #000;
+            border: none;
+            padding: 16px 30px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .w-100 {
+            width: 100%;
+        }
+        /* =========================================
+           7. FLOATING BUTTONS
+           ========================================= */
+        
+        .floating-wa {
+            background: #25D366;
+            color: #ffffff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+        }
+        
+        .floating-wa:hover {
+            background: #1ebe57;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            color: #ffffff;
+        }
+        
+        .back-to-top {
+            background: var(--gold-gradient);
+            color: #000000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(191, 149, 63, 0.5);
+        }
+        /* =========================================
+           8. FOOTER
+           ========================================= */
+        
+        .footer {
+            background-color: var(--black-solid);
+            padding: 60px 0 20px;
+            border-top: 1px solid var(--border-color);
+            color: #ffffff;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+        
+        .footer-col {
+            flex: 1;
+            min-width: 220px;
+        }
+        
+        .footer-logo {
+            width: 250px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        
+        .footer-col p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 0;
+            overflow-wrap: break-word;
+            font-size: 0.9rem;
+        }
+        
+        .footer-col h4 {
+            color: var(--gold-light);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold-main);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+        
+        .footer-contact-item i {
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-main);
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .footer-contact-item:hover {
+            color: var(--gold-main);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact-item:hover i {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--gold-main);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        /* =========================================
+           9. ANIMASI & RESPONSIVE
+           ========================================= */
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 992px) {
+            .flex-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .col-6 {
+                width: 100%;
+                min-width: auto;
+            }
+            /* Penyesuaian agar footer lebih rapih dalam layout 2 kolom di tablet */
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px 30px;
+                /* Ditambahkan jarak vertikal ekstra agar tiap item tidak terasa menempel */
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar,
+            .navbar.scrolled {
+                height: 70px;
+            }
+            .logo-img {
+                height: 160px;
+                /* Logo di mobile tetap terskala secara proposional, menghapus margin karena posisinya absolute */
+            }
+            .card {
+                padding: 25px 20px;
+            }
+            .hamburger {
+                display: block;
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: #0b0c0f;
+                width: 100%;
+                text-align: center;
+                transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                border-bottom: 1px solid var(--border-color);
+                padding: 30px 0;
+            }
+            .nav-menu.active {
+                left: 0;
+            }
+            .nav-list {
+                flex-direction: column;
+                gap: 22px;
+            }
+            .page-header {
+                padding: 130px 0 50px;
+            }
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            /* Menyesuaikan kembali footer agar menjadi 1 kolom terpusat di mobile */
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header / Navbar  -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/image/Logo.png" alt="AntoniKurniawanAttorney Logo" class="logo-img">
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+                    <li><a href="services.html" class="nav-link">Bidang Praktik</a></li>
+                    <li><a href="team.html" class="nav-link">Tim Kami</a></li>
+                    <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                    <li><a href="contact.html" class="nav-link active">Kontak Kami</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header reveal">
+            <div class="container">
+                <h1 class="gradient-text">Kontak Kami</h1>
+                <p>Hubungi kami untuk konsultasi hukum Anda</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="section">
+            <div class="container flex-row">
+                <!-- Info Kantor & Maps -->
+                <div class="col-6 reveal">
+                    <div class="card h-100">
+                        <div class="flex-row align-center mb-3">
+                            <h2 class="gradient-text m-0 flex-grow">Informasi Kantor</h2>
+                            <img src="assets/image/Logo.png" alt="Logo Kurniawan Attorney" style="height: 180px; margin-left: 15px; border-radius: 4px;">
+                        </div>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span> Jl. Ganesha Raya,Villa pamulang Blok UE No.5 RT 02 RW 16 Kelurahan Pondok Benda, kecamatan Pamulang, Tangerang selatan.</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+62 823 1881 4879</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>antonikurniawanattorney@gmail.com</span>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/attorneyantonikurniawan/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <span>@attorneyantonkurniawan</span>
+                            </li>
+                        </ul>
+                        <div class="mt-3">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3965.322353318095!2d106.71697632475176!3d-6.352297293637604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJl.%20Ganesha%20Raya%2C%20Villa%20Pamulang%20Blok%20UE%20No.5%2C%20RT%2002%20%20RW%2016%2C%20Kelurahan%20Pondok%20Benda%2C%20Kecamatan%20Pamulang%2C%20Kota%20Tangerang%20Selatan%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1785754206261!5m2!1sid!2sid"
+                                width="100%" height="230" style="border:1px solid var(--border-color); border-radius: 8px; filter: grayscale(80%) contrast(120%);" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Google Maps Kantor"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Konsultasi Hukum -->
+                <div class="col-6 reveal">
+                    <div class="card h-100">
+                        <h2 class="gradient-text mb-3">Hubungi Kami</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="nama@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Nomor Telepon / WhatsApp</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="0812xxxxxx">
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Layanan Hukum</label>
+                                <select id="service" name="service" required>
+                                    <option value="" disabled selected>Pilih Layanan</option>
+                                    <option value="Corporate & Employment Law">Corporate & Employment Law</option>
+                                    <option value="Commercial Law">Commercial Law</option>
+                                    <option value="Civil & Criminal Litigation">Civil & Criminal Litigation</option>
+                                    <option value="Lainnya">Lainnya</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Pesan / Deskripsi Kasus Singkat</label>
+                                <textarea id="message" name="message" rows="4" required placeholder="Ceritakan secara singkat permasalahan hukum Anda..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary w-100 mt-3">
+                                <span>Kirim Pesan</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6282318814879" class="floating-wa" target="_blank" aria-label="Chat via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="assets/image/Logo1.png" alt="Logo Antoni Kurniawan Attorney" class="footer-logo">
+                <p>Anda tidak harus menghadapi masalah hukum ini sendirian. AntoniKurniawanattrorney hadir untuk mendengarkan, melindungi, dan memperjuangkan hak anda, oleh karena itu langkah pertama menuju keadilan dimulai dari sini.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="footer-contact-list">
+                    <a href="mailto:antonikurniawanattorney@gmail.com" class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>antonikurniawanattorney@gmail.com</span>
+                    </a>
+
+                    <a href="https://wa.me/6282318814879" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+62 823 1881 4879</span>
+                    </a>
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=Jl.+Ganesha+Raya,+Villa+Pamulang+Blok+UE+No.5,+RT+02+RW+16,+Kelurahan+Pondok+Benda,+Kecamatan+Pamulang,+Kota+Tangerang+Selatan" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Jl. Ganesha Raya, Villa Pamulang Blok UE No.5, RT 02 RW 16, Kelurahan Pondok Benda, Kecamatan Pamulang, Kota Tangerang Selatan, Jawa Barat</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/attorneyantonkurniawan/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>@attorneyantonkurniawan</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="services.html">Layanan Kami</a></li>
+                    <li><a href="team.html">Team Kami</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="contact.html">Kontak Kami</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Maps</h4>
+                <div class="mt-3">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3965.322353318095!2d106.71697632475176!3d-6.352297293637604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJl.%20Ganesha%20Raya%2C%20Villa%20Pamulang%20Blok%20UE%20No.5%2C%20RT%2002%20%20RW%2016%2C%20Kelurahan%20Pondok%20Benda%2C%20Kecamatan%20Pamulang%2C%20Kota%20Tangerang%20Selatan%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1785754206261!5m2!1sid!2sid"
+                        width="100%" height="200" style="border:1px solid var(--border-color); border-radius: 8px; filter: grayscale(80%) contrast(120%);" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Google Maps Kantor"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 AntoniKurniawanAttorney. All Rights Reserved. | Theme By DreamScript</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interaktif -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const preloader = document.getElementById('preloader');
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 500);
+                }, 300);
+            });
+
+            const navbar = document.getElementById('navbar');
+            const backToTop = document.getElementById('backToTop');
+            let isScrolling = false;
+
+            window.addEventListener('scroll', () => {
+                if (!isScrolling) {
+                    window.requestAnimationFrame(() => {
+                        if (window.scrollY > 50) {
+                            navbar.classList.add('scrolled');
+                            backToTop.classList.add('show');
+                        } else {
+                            navbar.classList.remove('scrolled');
+                            backToTop.classList.remove('show');
+                        }
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
+                }
+            }, {
+                passive: true
+            });
+
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }));
+
+            const revealElements = document.querySelectorAll('.reveal');
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value;
+
+                submitBtn.innerHTML = '<span>Mengalihkan ke WhatsApp...</span> <i class="fas fa-spinner fa-spin"></i>';
+                submitBtn.style.opacity = '0.7';
+                submitBtn.disabled = true;
+
+                const targetWaNumber = '6282318814879';
+                const waMessage = `Halo Antoni Kurniawan Attorney, saya ingin berkonsultasi.%0A%0A*Nama:* ${encodeURIComponent(name)}%0A*Email:* ${encodeURIComponent(email)}%0A*No. Telp/WA:* ${encodeURIComponent(phone)}%0A*Layanan:* ${encodeURIComponent(service)}%0A*Pesan/Kasus:* ${encodeURIComponent(message)}`;
+
+                setTimeout(() => {
+                    window.open(`https://wa.me/${targetWaNumber}?text=${waMessage}`, '_blank');
+
+                    contactForm.reset();
+                    submitBtn.innerHTML = '<span>Kirim Pesan</span> <i class="fas fa-paper-plane"></i>';
+                    submitBtn.style.opacity = '1';
+                    submitBtn.disabled = false;
+                }, 800);
+            });
+        });
+    </script>
+</body>
+
+</html>
