@@ -217,14 +217,12 @@
             display: flex;
             align-items: center;
             text-decoration: none;
-            /* Membatasi hitbox agar tidak terlalu melebar */
             height: 60px;
             width: 180px;
             position: relative;
         }
         
         .logo-img {
-            /* Logo diperbesar secara visual namun tidak memengaruhi ukuran hitbox */
             height: 270px;
             width: auto;
             object-fit: contain;
@@ -356,7 +354,6 @@
             transition: var(--transition);
             box-sizing: border-box;
             overflow: hidden;
-            /* Mencegah elemen keluar dari card */
         }
         
         .card:hover {
@@ -393,7 +390,6 @@
             border: 1px solid var(--border-color);
             flex-shrink: 0;
         }
-        /* Ukuran font diperkecil di sini */
         
         .contact-info span {
             line-height: 1.5;
@@ -401,16 +397,13 @@
             flex: 1;
             font-size: 0.85rem;
         }
-        /* Mencegah teks selain alamat turun ke bawah (Wrap) */
         
         .contact-info li:not(:first-child) span {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             display: block;
-            /* Dibutuhkan agar ellipsis bekerja */
         }
-        /* Alamat (Elemen pertama) tetap boleh wrap/turun ke bawah */
         
         .contact-info li:first-child span {
             white-space: normal;
@@ -420,6 +413,29 @@
             text-decoration: none;
             display: flex;
             align-items: center;
+        }
+        /* Ukuran diperkecil khusus di desktop agar teks tidak terpotong ke bawah */
+        
+        .office-info-img {
+            height: 60px;
+            margin-left: 15px;
+            border-radius: 4px;
+            object-fit: contain;
+        }
+        /* Class pembungkus judul dan logo kantor */
+        
+        .office-title-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            /* Mencegah item turun ke baris baru */
+        }
+        /* Menyesuaikan teks judul agar ukurannya sedikit lebih luwes jika layarnya pas-pasan */
+        
+        .office-title-wrapper h2 {
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
         }
         /* =========================================
            6. FORMS
@@ -705,11 +721,19 @@
                 width: 100%;
                 min-width: auto;
             }
-            /* Penyesuaian agar footer lebih rapih dalam layout 2 kolom di tablet */
             .footer-container {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 50px 30px;
-                /* Ditambahkan jarak vertikal ekstra agar tiap item tidak terasa menempel */
+            }
+            /* Pengaturan untuk versi mobile/tablet agar gambar menumpuk di bawah teks */
+            .office-title-wrapper {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+            .office-title-wrapper .office-info-img {
+                margin-left: 0;
+                margin-top: 15px;
             }
         }
         
@@ -720,7 +744,9 @@
             }
             .logo-img {
                 height: 160px;
-                /* Logo di mobile tetap terskala secara proposional, menghapus margin karena posisinya absolute */
+            }
+            .office-info-img {
+                height: 90px;
             }
             .card {
                 padding: 25px 20px;
@@ -762,7 +788,6 @@
             .page-header h1 {
                 font-size: 2.2rem;
             }
-            /* Menyesuaikan kembali footer agar menjadi 1 kolom terpusat di mobile */
             .footer-container {
                 grid-template-columns: 1fr;
             }
@@ -817,9 +842,9 @@
                 <!-- Info Kantor & Maps -->
                 <div class="col-6 reveal">
                     <div class="card h-100">
-                        <div class="flex-row align-center mb-3">
-                            <h2 class="gradient-text m-0 flex-grow">Informasi Kantor</h2>
-                            <img src="assets/image/Logo.png" alt="Logo Kurniawan Attorney" style="height: 180px; margin-left: 15px; border-radius: 4px;">
+                        <div class="office-title-wrapper mb-3">
+                            <h2 class="gradient-text m-0">Informasi Kantor</h2>
+                            <img src="assets/image/Logobaru.png" alt="Logo Kurniawan Attorney" class="office-info-img">
                         </div>
                         <ul class="contact-info">
                             <li>
@@ -838,7 +863,6 @@
                                 <a href="https://www.instagram.com/attorneyantonikurniawan/" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Instagram">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                                <span>@attorneyantonkurniawan</span>
                             </li>
                         </ul>
                         <div class="mt-3">
@@ -928,7 +952,7 @@
 
                     <a href="https://www.instagram.com/attorneyantonkurniawan/" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
                         <i class="fab fa-instagram"></i>
-                        <span>@attorneyantonkurniawan</span>
+                        <span></span>
                     </a>
                 </div>
             </div>
